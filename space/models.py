@@ -5,7 +5,7 @@ from django.db import models
 class Jupiter(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField()
-    diameter = models.FloatField(help_text="Diameter in kilometers")
+    diameter = models.FloatField(help_text="Diameter in Miles")
     distance_from_sun = models.FloatField(help_text="Distance from Sun in Astronomical units")
     mass = models.FloatField(help_text="Mass relected in Earth masses")
     orbital_period = models.FloatField(help_text="Orbital period reflected in Earth days")
@@ -14,7 +14,8 @@ class Jupiter(models.Model):
 class Moon(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField()
-    diameter = models.FloatField(help_text="Diameter in Kilometer")
-    orbital_period = models.FloatField(help_text="Orbital period reflected in Earth days")
-    distance_from_jupiter = models.FloatField(help_text="Average distance measured in kilometers")
-    
+    diameter = models.FloatField(help_text="Diameter in Miles.")
+    orbital_period = models.FloatField(help_text="Orbital period reflected in Earth days.")
+    distance_from_jupiter = models.FloatField(help_text="Average distance measured in Miles.")
+
+#User Login Via Email
