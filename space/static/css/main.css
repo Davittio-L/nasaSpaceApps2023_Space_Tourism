@@ -1,0 +1,17 @@
+body {
+    background-color: grey;
+}
+
+/* Rounded Banner */
+.banner{
+    /* The Image Used */
+    background-image: url('/static/images/banner.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px grba(0, 0, 0, 0.1);
+}

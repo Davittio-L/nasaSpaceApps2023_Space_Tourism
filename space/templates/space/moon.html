@@ -1,0 +1,11 @@
+{% extends space/base.html %}
+
+{% block content %}
+<p>Moons of Jupiter</p>
+<ul>
+    {% for moon in Moons %}
+    <li>{{ moon }}</li>
+    {% empty %}
+    
+</ul>
+{% endblock %}
