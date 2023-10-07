@@ -4,5 +4,7 @@ from . import views
 app_name = 'space'
 urlpatterns = [
     #Home Page
-    path('', views.index, name='index'),
+    path('', views.main, name='main'),
+    #Page for Europa
+    path('moon/', views.moon, name='moon'),
 ]
