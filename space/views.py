@@ -27,10 +27,9 @@ def user_login(request):
         username = request.POST['login-username']
         password = request.POST['login-password']
         user = authenticate(request, username=username, password=password)
-
         if user is not None:
             login(request, user)
             return redirect('space:main')
         else:
-            return render(request, 'space/login.html', {'error': 'Invalid username or password'})
+            return render(request, 'space/main.html', {'error': 'Invalid username or password'})
     return render(request, 'space/main.html')
