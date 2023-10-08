@@ -17,5 +17,3 @@ class Moon(models.Model):
     diameter = models.FloatField(help_text="Diameter in Miles.")
     orbital_period = models.FloatField(help_text="Orbital period reflected in Earth days.")
     distance_from_jupiter = models.FloatField(help_text="Average distance measured in Miles.")
-
-#User Login Via Email
