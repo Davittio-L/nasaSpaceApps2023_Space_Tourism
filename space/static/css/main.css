@@ -5,7 +5,7 @@ body, html {
     font-family: Arial, Helvetica, sans-serif
 }
 
-h1 {
+h2 {
     text-align: center;
 }
 
@@ -31,17 +31,11 @@ h1 {
     box-shadow: 0 4px 6px grba(0, 0, 0, 0.1);
 }
 
-.main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    height: 100vh;
-}
 
 .jupiter-photo {
     margin-top: calc(33.33% - 0.5 * [IMAGE HEIGHT]);
     max-width: 90%;
+    position: center;
     margin-bottom: 20px;
 }
 
@@ -50,12 +44,12 @@ h1 {
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 20px;
+    gap: 20;
     flex-wrap:nowrap;
 }
 
 .flashcard {
-    background: rgb(255, 255, 252, 0.8);
+    background: rgba(255, 255, 250, 0.8);
     padding: 20px;
     border-radius: 8px;
     width: 200px;

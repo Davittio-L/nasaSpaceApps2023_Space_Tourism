@@ -8,21 +8,21 @@
     <title>Jupiter Homepage</title>
 </head>
 <body>
-    <div class ="banner"
+    <div class ="banner">
   <div>
     <h1>Welcome to Jovian Tours!</h1>
     <h3>Where We share our love for Jupiter its major moons with you!</h3>
-    <button>Setup Custom Tour Here</button>
+    <a href="{% url 'register' %}" class="your-button-class">Register</a>
   </div>
 </div>
 <main>
     <h2>Jupiter</h2>
     <div class="container">
-    <img src="static/images/Jupiter.jpg" alt="Jupiter" class="jupiter-photo" width="650" height="650">
+    <img src="static/images/Jupiter.jpg" alt="Jupiter" class="jupiter-photo" height="650">
     </div>
-    <div class=""flashcard-container>
+    <div class="flashcard-container">
         <div class="flashcard">
-            <p><strong>Fact 1: Jupiter is more than twice as massive as all other planets combined being 318 times bigger than Earth!</strong> </p>
+            <p><strong>Fact 1: Jupiter is so large it could fit 1,300 Earths within it! </strong> </p>
         </div>
         <div class="flashcard">
             <p><strong>Fact 2: Jupiter is a gas giant made mostly of hydrogen and helium.</strong></p>
