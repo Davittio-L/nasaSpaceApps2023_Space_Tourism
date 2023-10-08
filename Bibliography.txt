@@ -20,4 +20,4 @@ Jupiter4.jpg - James Webb Image of Jupiters
     NASA, ESA, CSA, Jupiter ERS Team, image processing by Ricardo Hueso (UPV/EHU) and Judy Schmidt
 
 Jupiter5.jpg - 
-    
+    NASA,, JPL, Caltech, SwRI, MSSS, Thomas Thomopoulos
