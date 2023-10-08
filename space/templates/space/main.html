@@ -1,13 +1,155 @@
 {% extends 'space/base.html' %}
+{% load static %}
 {% block content %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jupiter Homepage</title>
+    <style>
+        #loader {
+            border: 5px solid #f3f3f3; /* Light grey */
+            border-top: 5px solid #3d3d3d; /* Grey */
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 2;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
+    <div id="info">
+        <a href="https://threejs.org" target="_blank" rel="noopener"></a>
+    </div>
+
+    <div id="loader"></div>
+
+    <script src="{% static 'js/three.js' %}"></script>
+    <script src="{% static 'js/GLTFLoader.js' %}"></script>
+ 
+    </script>
+
+    <script type="module">
+
+        import * as THREE from 'three';
+
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+        import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
+
+        let camera, scene, renderer;
+        let controls, gui;
+
+        init();
+        animate();
+
+        function init() {
+
+            THREE.Object3D.DEFAULT_UP.set( 0, 0, 1 );
+
+            renderer = new THREE.WebGLRenderer( { antialias: true } );
+            renderer.setPixelRatio( window.devicePixelRatio );
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            document.body.appendChild( renderer.domElement );
+
+            camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 1000 );
+            camera.position.set( 26, - 40, 5 );
+
+            scene = new THREE.Scene();
+
+            const directionalLight = new THREE.DirectionalLight( 0xffffff, 6 );
+            directionalLight.position.set( 0, 0, 2 );
+            scene.add( directionalLight );
+
+            const loader = new THREE.GLTFLoader();
+            loader.load('static/images/jupiter.gltf', function(gltf) {
+                const planet = gltf.scene;
+                scene.add(planet); 
+
+                document.getElementById( 'loader' ).style.display = 'none';
+            });
+
+            controls = new OrbitControls( camera, renderer.domElement );
+
+            window.addEventListener( 'resize', resize );
+
+        }
+
+        function resize() {
+
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize( width, height );
+
+        }
+
+        function animate() {
+
+            controls.update();
+            renderer.render( scene, camera );
+
+            requestAnimationFrame( animate );
+
+        }
+
+        function initGUI( layers ) {
+
+            gui = new GUI( { title: 'layers' } );
+
+            for ( let i = 0; i < layers.length; i ++ ) {
+
+                const layer = layers[ i ];
+                gui.add( layer, 'visible' ).name( layer.name ).onChange( function ( val ) {
+
+                    const name = this.object.name;
+
+                    scene.traverse( function ( child ) {
+
+                        if ( child.userData.hasOwnProperty( 'attributes' ) ) {
+
+                            if ( 'layerIndex' in child.userData.attributes ) {
+
+                                const layerName = layers[ child.userData.attributes.layerIndex ].name;
+
+                                if ( layerName === name ) {
+
+                                    child.visible = val;
+                                    layer.visible = val;
+
+                                }
+
+                            }
+
+                        }
+
+                    } );
+
+                } );
+
+            }
+
+        }
+    </script>
+
+
+
+    
     <div class ="banner">
   <div>
     <h1>Welcome to Jovian Tours!</h1>
@@ -26,20 +168,20 @@
             <p><strong>Did you know, Jupiter is so large it could fit 1,300 Earths within it! </strong> </p>
         </div>
         <div class="flashcard">
-            <p><strong>Fact 2: Jupiter is a gas giant made mostly of hydrogen and helium.</strong></p>
+            <p><strong>Jupiter is a gas giant made mostly of hydrogen and helium.</strong></p>
         </div>
         <div class="flashcard">
-            <p><strong>Fact 3: One day on Jupiter goes by in just 10 hours!</strong></p>
+            <p><strong>One day on Jupiter goes by in just 10 hours!</strong></p>
         </div>
     </div>
     <img src="static/images/jupiter3.webp" alt="Photo of Jupiter from South Pole" class="jupiter-photo3" height="750">
-    <img src="static/images/jupiter4.jpg" alt="Photo of Jupiter" class="jupiter-photo4" height="750">
+    <img src="static/images/jupiter4.png" alt="Photo of Jupiter" class="jupiter-photo4" height="750">
     <div class="flashcard-container">
       <div class="flashcard">
           <p><strong>Did you know that Jupiter has rings? Our tour guide will get you up close and personal to view these amazing rings. Although faint, once close enough you will see them in their grandure </strong> </p>
       </div>
       <div class="flashcard">
-          <p><strong>I bet you think a year is long here on Earth. Well, on Jupiter one year is 11.8 Earth years! You better tell you boss you need a few more months of vacation during the year if you live here!</strong></p>
+          <p><strong>I bet you think a year is long here on Earth. Well, on Jupiter one year is 12 Earth years! You better tell you boss you need a few more months of vacation during the year if you live here!</strong></p>
       </div>
       <div class="flashcard">
         <p><strong>Jupiter is one of the most visited objects in our solar system. It has had Pioneer 10, and 11, Voyager 1, and 2, Cassini, New Horizons, and Juno pass or orbit it! Well charted territories means more safety for your visit.</strong></p>

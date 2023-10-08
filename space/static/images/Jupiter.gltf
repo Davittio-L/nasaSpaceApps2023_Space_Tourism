@@ -1,0 +1,344 @@
+{
+	"asset":
+	{
+		"version": "2.0",
+		"generator": "Unreal Engine 5.3.0"
+	},
+	"scene": 0,
+	"accessors": [
+		{
+			"bufferView": 0,
+			"count": 59400,
+			"type": "SCALAR",
+			"componentType": 5123
+		},
+		{
+			"bufferView": 1,
+			"count": 10199,
+			"type": "VEC3",
+			"componentType": 5126,
+			"min": [ -10, -10, -10 ],
+			"max": [ 10, 10, 10 ]
+		},
+		{
+			"bufferView": 2,
+			"count": 10199,
+			"type": "VEC3",
+			"componentType": 5126
+		},
+		{
+			"bufferView": 3,
+			"count": 10199,
+			"type": "VEC4",
+			"componentType": 5126
+		},
+		{
+			"bufferView": 4,
+			"count": 10199,
+			"type": "VEC2",
+			"componentType": 5126
+		}
+	],
+	"buffers": [
+		{
+			"uri": "Jupiter.bin",
+			"byteLength": 608352
+		}
+	],
+	"bufferViews": [
+		{
+			"buffer": 0,
+			"byteLength": 118800,
+			"target": 34963
+		},
+		{
+			"buffer": 0,
+			"byteLength": 122388,
+			"byteOffset": 118800,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 122388,
+			"byteOffset": 241188,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 163184,
+			"byteOffset": 363576,
+			"target": 34962
+		},
+		{
+			"buffer": 0,
+			"byteLength": 81592,
+			"byteOffset": 526760,
+			"target": 34962
+		}
+	],
+	"images": [
+		{
+			"uri": "Earth_Planet_Material_Inst_Planet_BaseColor.png"
+		},
+		{
+			"uri": "Earth_Planet_Material_Inst_Planet_Emissive.png"
+		},
+		{
+			"uri": "Earth_Clouds_Material_Inst_BaseColor.png"
+		},
+		{
+			"uri": "Earth_Clouds_Material_Inst_Normal.png"
+		},
+		{
+			"uri": "Earth_Clouds_Shadow_Material_Inst_BaseColor.png"
+		},
+		{
+			"uri": "Mars_Atmosphere_Material_Inst_Atmosphere_BaseColor.png"
+		}
+	],
+	"materials": [
+		{
+			"name": "Earth_Planet_Material_Inst_Planet",
+			"pbrMetallicRoughness":
+			{
+				"baseColorTexture":
+				{
+					"index": 0
+				},
+				"metallicFactor": 0,
+				"roughnessFactor": 0.498039246
+			},
+			"emissiveTexture":
+			{
+				"index": 1
+			},
+			"emissiveFactor": [ 1, 1, 1 ]
+		},
+		{
+			"name": "Earth_Clouds_Material_Inst",
+			"pbrMetallicRoughness":
+			{
+				"baseColorTexture":
+				{
+					"index": 2
+				},
+				"metallicFactor": 0,
+				"roughnessFactor": 0.5
+			},
+			"normalTexture":
+			{
+				"index": 3
+			},
+			"alphaMode": "BLEND"
+		},
+		{
+			"name": "Earth_Clouds_Shadow_Material_Inst",
+			"pbrMetallicRoughness":
+			{
+				"baseColorTexture":
+				{
+					"index": 4
+				},
+				"metallicFactor": 0,
+				"roughnessFactor": 0.5
+			},
+			"alphaMode": "BLEND"
+		},
+		{
+			"name": "Mars_Atmosphere_Material_Inst_Atmosphere",
+			"pbrMetallicRoughness":
+			{
+				"baseColorTexture":
+				{
+					"index": 5
+				},
+				"metallicFactor": 0,
+				"roughnessFactor": 0.5
+			},
+			"emissiveFactor": [ 0.049987793, 0.0280323718, 0.0196030587 ],
+			"alphaMode": "BLEND"
+		}
+	],
+	"meshes": [
+		{
+			"name": "Planet",
+			"primitives": [
+				{
+					"attributes":
+					{
+						"POSITION": 1,
+						"NORMAL": 2,
+						"TANGENT": 3,
+						"TEXCOORD_0": 4
+					},
+					"indices": 0,
+					"material": 0
+				}
+			]
+		},
+		{
+			"name": "Planet_Sphere_High_Res",
+			"primitives": [
+				{
+					"attributes":
+					{
+						"POSITION": 1,
+						"NORMAL": 2,
+						"TANGENT": 3,
+						"TEXCOORD_0": 4
+					},
+					"indices": 0,
+					"material": 1
+				}
+			]
+		},
+		{
+			"name": "Planet_Sphere_High_Res",
+			"primitives": [
+				{
+					"attributes":
+					{
+						"POSITION": 1,
+						"NORMAL": 2,
+						"TANGENT": 3,
+						"TEXCOORD_0": 4
+					},
+					"indices": 0,
+					"material": 2
+				}
+			]
+		},
+		{
+			"name": "Atmosphere",
+			"primitives": [
+				{
+					"attributes":
+					{
+						"POSITION": 1,
+						"NORMAL": 2,
+						"TANGENT": 3,
+						"TEXCOORD_0": 4
+					},
+					"indices": 0,
+					"material": 3
+				}
+			]
+		}
+	],
+	"nodes": [
+		{
+			"name": "Brush0"
+		},
+		{
+			"name": "DirectionalLight",
+			"translation": [ 4.0999999, -0.5, 0 ],
+			"rotation": [ -0.390731126, 0.920504868, -1.42632022e-08, 3.36019923e-08 ],
+			"scale": [ 2.5, 2.5, 2.5 ],
+			"children": [ 2 ]
+		},
+		{
+			"name": "DirectionalLight",
+			"rotation": [ -0, -0.707106829, 0, 0.707106769 ],
+			"extensions":
+			{
+				"KHR_lights_punctual":
+				{
+					"light": 0
+				}
+			}
+		},
+		{
+			"name": "Planet_BP",
+			"rotation": [ 0.125, -0.576817989, 0.216506347, 0.777676642 ],
+			"children": [ 4, 5, 6, 7 ]
+		},
+		{
+			"name": "Planet",
+			"rotation": [ -0.109566167, 0.754393935, -0.243011117, 0.59985888 ],
+			"mesh": 0
+		},
+		{
+			"name": "Clouds",
+			"scale": [ 1.00199997, 1.00199997, 1.00199997 ],
+			"mesh": 1
+		},
+		{
+			"name": "Clouds_Shadow",
+			"rotation": [ 0.000872656703, -0.000872612, 7.5250864e-07, 0.999999225 ],
+			"scale": [ 1.00199997, 1.00199997, 1.00199997 ],
+			"mesh": 2
+		},
+		{
+			"name": "Atmosphere",
+			"rotation": [ -0.189092517, 0.284681171, -0.140875503, 0.92916888 ],
+			"scale": [ 1.00300002, 1.00300002, 1.00300002 ],
+			"mesh": 3
+		},
+		{
+			"name": "DefaultPhysicsVolume0"
+		},
+		{
+			"name": "AbstractNavData-Default"
+		}
+	],
+	"samplers": [
+		{
+			"minFilter": 9987,
+			"magFilter": 9729
+		}
+	],
+	"scenes": [
+		{
+			"name": "Jupiter",
+			"nodes": [ 0, 1, 3, 8, 9 ]
+		}
+	],
+	"textures": [
+		{
+			"name": "Earth_Planet_Material_Inst_Planet_BaseColor",
+			"sampler": 0,
+			"source": 0
+		},
+		{
+			"name": "Earth_Planet_Material_Inst_Planet_Emissive",
+			"sampler": 0,
+			"source": 1
+		},
+		{
+			"name": "Earth_Clouds_Material_Inst_BaseColor",
+			"sampler": 0,
+			"source": 2
+		},
+		{
+			"name": "Earth_Clouds_Material_Inst_Normal",
+			"sampler": 0,
+			"source": 3
+		},
+		{
+			"name": "Earth_Clouds_Shadow_Material_Inst_BaseColor",
+			"sampler": 0,
+			"source": 4
+		},
+		{
+			"name": "Mars_Atmosphere_Material_Inst_Atmosphere_BaseColor",
+			"sampler": 0,
+			"source": 5
+		}
+	],
+	"extensions":
+	{
+		"KHR_lights_punctual":
+		{
+			"lights": [
+				{
+					"name": "DirectionalLight",
+					"type": "directional",
+					"color": [ 0.0263557564, 0.0198377613, 0.0133177806 ]
+				}
+			]
+		}
+	},
+	"extensionsUsed": [
+		"KHR_lights_punctual"
+	]
+}
