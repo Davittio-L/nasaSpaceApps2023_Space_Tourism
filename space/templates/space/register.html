@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
-    <link rel="stylesheet" href="/static/regoster.css">
+    <link rel="stylesheet" href="/static/css/register.css">
 </head>
 <body>
+    <!-- Register Information -->
    <div class="registration-container">
     <h1>Register Now!</h1>
     <div class="registration-box">
-        <form action="/your-post-url-here" method="post">
+        <form action="{% url 'space:register' %}" method="post">
+            {% csrf_token %}
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
@@ -23,9 +25,33 @@
                 <label for="password2">Confirm Password</label>
                 <input type="password" id="password2" name="password2" required>
             </div>
+
+            <div cass="input-group">
+                <button type="submit">Confirm</button>
+            </div>
         </form>
     </div>
    </div>
+   <!-- Login Section  -->
+  <div class="login-container">
+    <h1>Login</h1>
+    <div class="login-box">
+        <form action="{% url 'space:login' %}" method="post">
+            {% csrf_token %}
+            <div class="input-group">
+                <label for="login-username">Username</label>
+                <input type="text" id="login-username" name="login-username" required>
+            </div>
+            <div class="input-group">
+                <label for="login-password">Pasword</label>
+                <input type="password" id="login-password" name="login-password" required>
+            </div>
+            <div class="input-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+  </div>
 </body>
 </html>
 

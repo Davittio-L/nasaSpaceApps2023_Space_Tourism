@@ -9,5 +9,5 @@ urlpatterns = [
     #Page for Europa
     path('moon/', views.moon, name='moon'),
     path('register/', views.register, name='register'),
-
+    path('login/', views.user_login, name='login'),
 ]

@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: grey;
+    background-image: url('../images/jupiter2.jpg');
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -9,11 +9,18 @@ body {
     align-items: center;
 }
 
-.registration-container {
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.registration-container, .login-container {
     text-align: center;
 }
 
-.registration-box {
+.registration-box, .login-box {
     margin: 20px auto;
     padding: 20px;
     border: 1px solid black;
