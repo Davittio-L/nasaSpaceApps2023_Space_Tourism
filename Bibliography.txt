@@ -4,8 +4,23 @@ Europa.webp
 Europa2.jpg
     NASA, JPL-Caltech, SwRL, MSSS, Paul Schenk
 
-Flashcard Facts - Jupiter
-    Nasa, science.nasa.gov/jupiter/facts/
+Jupiter Fact 1 - Named after Roman Ruler
+    Owen, Tobias Jupiter-Planet, September 5, 2023, https://www.britannica.com/place/Jupiter-planet
+
+Jupiter Fact 2 - Big Red Spot Cloud Depth
+    Nasa, Jupiter Facts, Atmosphere P7, https://science.nasa.gov/jupiter/facts/
+
+Jupiter Fact 3 - Day cycle takes 10 hours
+    Owen, Tobias Jupiter-Planet, September 5, 2023, https://www.britannica.com/place/Jupiter-planet
+
+Jupiter Fact 4 - Jupiter Heat Source
+     Owen, Tobias Jupiter-Planet, September 5, 2023, https://www.britannica.com/place/Jupiter-planet
+
+Jupiter Fact 5 - Size Comparison
+    Nasa, Jupiter Facts, Size & Distance P1, https://science.nasa.gov/jupiter/facts/
+
+Jupiter Fact 6 - Cloud Layers
+    asa, Jupiter Facts, Atmosphere P1, https://science.nasa.gov/jupiter/facts/
 
 Jupiter.jpg Photo of Jupiters 'Northern Lights'
     NASA, ESA. AND J. Nicholas [University of Leicester]

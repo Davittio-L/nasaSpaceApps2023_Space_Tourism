@@ -11,9 +11,7 @@ def main(request):
     return render(request, 'space/main.html')
 
 def moon(request):
-    europa = Moon.objects.order_by('data_added')
-    context = {'moon': moon}
-    return render(request, 'space/moon.html', context)
+    return render(request, 'space/moon.html')
 
 def register(request):
     if request.method == 'POST':

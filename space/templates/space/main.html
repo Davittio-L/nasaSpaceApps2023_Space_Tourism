@@ -150,12 +150,17 @@
 
 
     
-    <div class ="banner">
+<div class ="banner">
   <div>
-    <h1>Welcome to Jovian Tours!</h1>
-    <h3>Where We share our love for Jupiter its major moons with you!</h3>
-    <a href="{% url 'space:register' %}" class="simple-button">Register</a>
-
+    <h1>Welcome to The Jovian Expedition Force!</h1>
+    <h3>The Jovian Experts!</h3>
+     <!-- Banner Buttons -->
+    <div class="button-container">
+      <a href="{% url 'space:register' %}" class="simple-button">Register</a>
+        <div class="redirect-container">
+          <a href="{% url 'space:moon' %}" class="simple-button">Where To Tour!</a>
+        </div>
+     </div>
   </div>
 </div>
 <main>
@@ -166,26 +171,26 @@
     </div>
     <div class="flashcard-container">
         <div class="flashcard">
-            <p><strong>Did you know, Jupiter is so large it could fit 1,300 Earths within it! </strong> </p>
+            <p><strong>Did you know, Jupiter was named after the Roman Ruler of the Gods? </strong> </p>
         </div>
         <div class="flashcard">
-            <p><strong>Jupiter is a gas giant made mostly of hydrogen and helium.</strong></p>
+            <p><strong>Jupiters Big Red Spot is a storm that reaches down 300 miles! Now thats deep.</strong></p>
         </div>
         <div class="flashcard">
-            <p><strong>One day on Jupiter goes by in just 10 hours. Talk about fast!</strong></p>
+            <p><strong>One day on Jupiter goes by in just 10 hours. Talk about a hectic day. You'd get nothing done!</strong></p>
         </div>
     </div>
     <img src="static/images/jupiter3.webp" alt="Photo of Jupiter from South Pole" class="jupiter-photo3" width="600" height="750">
     <img src="static/images/jupiter4.png" alt="Photo of Jupiter" class="jupiter-photo4" height="750">
     <div class="flashcard-container">
       <div class="flashcard">
-          <p><strong>Did you know that Jupiter has rings? Our tour guide will get you up close and personal to view these amazing rings. Although faint, once close enough you will see them in their grandure </strong> </p>
+          <p><strong>Did you know that Jupiter has its own heat source? it emits more energy than it receives from the Sun. Talk about a personal heater! </strong> </p>
       </div>
       <div class="flashcard">
-          <p><strong>I bet you think a year is long here on Earth. Well, on Jupiter one year is 12 Earth years! You better tell you boss you need a few more months of vacation during the year if you live here!</strong></p>
+          <p><strong>Try this on for size: Jupiter is 11 times wider than Earth. If Earth were the size of a nickel, Jupiter would be the size of a basketball!</strong></p>
       </div>
       <div class="flashcard">
-        <p><strong>Jupiter has been visited by Pioneer 10, and 11, Voyager 1, and 2, Cassini, New Horizons, and Juno pass or orbit it! Well charted territories means more safety for your visit. Talk about popular!</strong></p>
+        <p><strong>The top cloud layer of Jupiter is ammonia ice, the middle layer is likely made of ammonium hydrosulfide crystals. The inner could be water ice.</strong></p>
       </div>
 </main>
 </body>
